@@ -1,0 +1,83 @@
+{
+  "version": "1.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch --target node",
+    "build": "tsdx build --target node",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build --target node",
+    "release": "np"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "name": "fastify-apollo-tracing",
+  "author": "Sascha Tandel",
+  "homepage": "https://github.com/sastan/fastify-apollo-tracing#readme",
+  "bugs": {
+    "url": "https://github.com/sastan/fastify-apollo-tracing/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sastan/fastify-apollo-tracing.git"
+  },
+  "module": "dist/fastify-apollo-tracing.esm.js",
+  "devDependencies": {
+    "fastify": "^3.7.0",
+    "graphql": "^15.3.0",
+    "husky": "^4.3.0",
+    "mercurius": "^6.3.0",
+    "np": "^6.5.0",
+    "pino-pretty": "^4.3.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
+  },
+  "resolutions": {
+    "**/@typescript-eslint/eslint-plugin": "^4.1.1",
+    "**/@typescript-eslint/parser": "^4.1.1"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@carv/is": "^1.0.1",
+    "@carv/stdlib": "^1.0.0",
+    "@carv/time": "^1.0.1",
+    "fastify-plugin": "^3.0.0",
+    "p-finally": "^2.0.1"
+  },
+  "peerDependencies": {
+    "fastify": "3.x",
+    "graphql": "^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0",
+    "mercurius": "6.x"
+  },
+  "keywords": [
+    "fastify",
+    "fastify-plugin",
+    "plugin",
+    "apollo",
+    "apollo-tracing",
+    "tracing",
+    "graphql",
+    "mercurius"
+  ]
+}
